@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Esercizio.</title>
+</head>
+<body>
+  <header>
+    <img src="././img/logo.svg" alt="Logo del sito" width="120" height="120">
+    <h1>Nome del Sito</h1>
+    <nav aria-label="Navigazione principale">
+      <ul>
+        <li><a href="#sezione1">Home</a></li>
+        <li><a href="#sezione2">Calendario</a></li>
+        <li><a href="#sezione3">Contatti</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sezione1">
+      <h2>Sezione 1</h2>
+      <p>Questa sezione contiene tre articoli strutturati, ognuno con un titolo e un paragrafo descrittivo.</p>
+
+      <article>
+        <h3>Articolo 1</h3>
+        <p><strong>Questo paragrafo usa il grassetto</strong></p>
+      </article>
+
+      <article>
+        <h3>Articolo 2</h3>
+        <p><em>Questa paragrafo usa il corsivo.</em></p>
+      </article>
+
+      <article>
+        <h3>Articolo 3</h3>
+        <p>
+          Lista di elementi formattati: <ul>
+            <li><ins>Testo sottolineato</ins></li>
+            <li><s>Testo cancellato</s></li>
+          </ul>
+        </p>
+      </article>
+    </section>
+
+    <section id="sezione2">
+      <h2>Sezione 2 — Calendario della settimana</h2>
+      <p>Tabella che rappresenta una settimana con tre fasce orarie (Mattina, Pomeriggio, Sera).</p>
+
+      <table border="1" summary="Calendario settimanale con orari">
+        <caption>Calendario settimanale</caption>
+        <thead>
+          <tr>
+            <th scope="col">Orario</th>
+            <th scope="col">Lunedì</th>
+            <th scope="col">Martedì</th>
+            <th scope="col">Mercoledì</th>
+            <th scope="col">Giovedì</th>
+            <th scope="col">Venerdì</th>
+            <th scope="col">Sabato</th>
+            <th scope="col">Domenica</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Mattina</th>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <th scope="row">Pomeriggio</th>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <th scope="row">Sera</th>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="sezione3">
+      <h2>Sezione 3 — Contatti</h2>
+      <p>Modulo di contatto:</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Modulo di contatto</legend>
+
+          <label for="nome">Nome:</label><br>
+          <input type="text" id="nome" name="nome" required><br><br>
+
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" required><br><br>
+
+          <label for="messaggio">Messaggio:</label><br>
+          <textarea id="messaggio" name="messaggio" rows="5" required></textarea><br><br>
+
+          <button type="submit">Invia</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <address>
+      Written by <a href="mailto:gianfrizio@gianfrizio.com">Vittorio Ciampi</a>.<br>
+      Visitaci a:<br>
+      gianfrizio.com<br>
+      04011, Aprilia<br>
+      Italia
+    </address>
+    <p>&copy; <span id="anno"></span> Esercizio</p>
+
+    <script>
+      document.getElementById('anno').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
