@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pagina di Default</title>
+        
+    </head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Benvenuto!</h1>
+            <nav>
+                <center>
+                <ul>
+                    <li><a href="#home" target="_blank" rel="noopener noreferrer">Home</a></li>
+                    <li><a href="#about" target="_blank" rel="noopener noreferrer">Chi siamo</a></li>
+                    <li><a href="#services" target="_blank" rel="noopener noreferrer">Servizi</a></li>
+                    <li><a href="#contact" target="_blank" rel="noopener noreferrer">Contatti</a></li>
+                </ul>
+                </center>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="container">
+            <h2>Home</h2>
+            <article>
+                <h3>Articolo di esempio</h3>
+                <p>Sezione principale</p>
+            </article>
+        </section>
+        <section id="about" class="container">
+            <h2>Chi siamo</h2>
+            <p>Info.</p>
+        </section>
+    <section id="services" class="container">
+            <h2>Servizi</h2>
+            <ul>
+                <li>Servizio 1</li>
+                <li>Servizio 2</li>
+                <li>Servizio 3</li>
+            </ul>
+        </section>
+    <aside class="container" align="center">
+            <h2>Aside</h2>
+            <p>Questa è una barra aside.</p>
+        </aside>
+    </main>
+        <section id="contact" class="container">
+            <h2>Contatti</h2>
+            <p>Compila il form qui sotto per contattarci.</p>
+            <form action="mailto:tuo@esempio.com?subject=Contatto" method="post" enctype="text/plain">
+                <fieldset>
+                    <legend>Contattaci</legend>
+                    <p>
+                        <label for="name">Nome</label><br>
+                        <input type="text" id="name" name="name" placeholder="Nome" required>
+                    </p>
+                    <p>
+                        <label for="subject">Oggetto</label><br>
+                        <input type="text" id="subject" name="subject" placeholder="Oggetto" required>
+                    </p>
+                    <p>
+                        <label for="email">Email</label><br>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </p>
+                    <p>
+                        <label for="message">Messaggio</label><br>
+                        <textarea id="message" name="message" placeholder="Messaggio" required rows="5"></textarea>
+                    </p>
+                    <p>
+                        <label for="country">Paese</label><br>
+                        <select name="country" id="country" required>
+                            <!-- Opzione di PlaceHolder -->
+                            <option value="" selected hidden disabled>Seleziona un Paese</option>
+                            <optgroup label="Europa">
+                                <option value="IT">Italia</option>
+                                <option value="FR">Francia</option>
+                                <option value="DE">Germania</option>
+                                <option value="ES">Spagna</option>
+                                <option value="PT">Portogallo</option>
+                            </optgroup>
+                            <optgroup label="America">
+                                <option value="US">Stati Uniti</option>
+                                <option value="CA">Canada</option>
+                                <option value="MX">Messico</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="submit">Invio</label><br>
+                        <input type="submit" id="submit" value="Invia">
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+
+    <footer class="container">
+        <center>esercizio 1</center>
+    </footer>
+</body>
+</html>
