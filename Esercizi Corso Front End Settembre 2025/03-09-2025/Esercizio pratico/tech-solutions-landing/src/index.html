@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Solutions - Consulenza Tecnologica</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/utilities.css">
+</head>
+<body>
+    <!-- Link per saltare direttamente al contenuto (accessibilità) -->
+    <a id="skip-link" class="skip-link" href="#main-content">Salta al contenuto</a>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Tech Solutions</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Servizi</a></li>
+                    <li><a href="#about">Chi Siamo</a></li>
+                    <li><a href="#contact">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="hero" class="hero" aria-label="Sezione principale">
+            <div class="hero-content">
+                <h2>Il tuo partner tecnologico</h2>
+                <p>Forniamo soluzioni innovative per far crescere la tua attività nell'era digitale.</p>
+                <a href="#services" class="cta-button">Scopri i Nostri Servizi</a>
+            </div>
+            <div class="hero-image" aria-hidden="true">
+                <img src="assets/images/hero-image.svg" alt="Team che lavora su soluzioni tecnologiche" />
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>I Nostri Servizi</h2>
+            <div class="services-grid">
+                <div class="service">
+                    <h3>Sviluppo Web Personalizzato</h3>
+                    <p>Soluzioni web su misura per migliorare la presenza digitale della tua azienda.</p>
+                </div>
+                <div class="service">
+                    <h3>Ottimizzazione SEO</h3>
+                    <p>Strategie SEO per aumentare visibilità e traffico organico.</p>
+                </div>
+                <div class="service">
+                    <h3>Consulenza Cloud</h3>
+                    <p>Architetture cloud scalabili e sicure per la tua infrastruttura.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>Chi Siamo</h2>
+            <p>Tech Solutions è un'azienda di consulenza tecnologica dedicata a supportare le imprese nell'uso strategico della tecnologia per crescere e innovare.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contattaci</h2>
+            <!-- Form senza JavaScript: usa Formspree (sostituisci l'ID) o modifica action con mailto: -->
+            <form id="contact-form" action="https://formspree.io/f/REPLACE_WITH_ID" method="POST" accept-charset="utf-8">
+                <p id="contact-help" class="form-help">Compila il modulo e ti risponderemo entro 48 ore. I campi con <span aria-hidden="true">*</span> sono obbligatori.</p>
+
+                <label for="name">Nome <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" required aria-required="true" aria-describedby="name-help">
+                <small id="name-help" class="form-help">Inserisci il tuo nome completo.</small>
+
+                <label for="email">Email <span class="required" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-help" placeholder="esempio@dominio.com">
+                <small id="email-help" class="form-help">Utilizzeremo questa email per risponderti.</small>
+
+                <label for="message">Messaggio <span class="required" aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" required aria-required="true" aria-describedby="message-help"></textarea>
+                <small id="message-help" class="form-help">Breve descrizione della richiesta (min. 10 caratteri consigliati).</small>
+
+                <!-- Campo opzionale per soggetto e istruzioni: personalizza se usi Formspree -->
+                <input type="hidden" name="_subject" value="Richiesta da sito Tech Solutions">
+
+                <button type="submit" class="cta-button">Invia Messaggio</button>
+            </form>
+            <p class="form-note">Se preferisci, puoi anche inviare un'email a <a href="mailto:info@techsolutions.example">info@techsolutions.example</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Tech Solutions. Tutti i diritti riservati.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer">Twitter</a>
+                <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!-- Hero SVG placeholder - semplificato per demo -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="heroTitle">
+  <title id="heroTitle">Team che lavora su soluzioni tecnologiche</title>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0d6efd" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#6610f2" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#g)" />
+  <g fill="#fff" font-family="Arial, sans-serif">
+    <text x="80" y="220" font-size="48">Soluzioni digitali per la tua impresa</text>
+    <text x="80" y="280" font-size="24">Consulenza • Sviluppo • Cloud</text>
+  </g>
+</svg>
