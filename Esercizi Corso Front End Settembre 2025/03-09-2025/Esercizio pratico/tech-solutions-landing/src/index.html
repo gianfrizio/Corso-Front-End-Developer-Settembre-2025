@@ -13,52 +13,102 @@
     <header>
         <div class="container">
             <div class="logo">
-                <h1>Tech Solutions</h1>
+                <a href="#home" aria-label="Tech Solutions">
+                    <img src="assets/images/logo.svg" alt="Logo Tech Solutions" width="140" height="40" />
+                </a>
             </div>
-            <nav>
+            <nav aria-label="Navigazione principale">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Servizi</a></li>
-                    <li><a href="#about">Chi Siamo</a></li>
-                    <li><a href="#contact">Contatti</a></li>
+                    <li><a href="#home" aria-label="Home">Home</a></li>
+                    <li><a href="#services" aria-label="Servizi">Servizi</a></li>
+                    <li><a href="#about" aria-label="Chi Siamo">Chi Siamo</a></li>
+                    <li><a href="#case-studies" aria-label="Progetti">Progetti</a></li>
+                    <li><a href="#contact" aria-label="Contatti">Contatti</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main id="main-content">
-        <section id="hero" class="hero" aria-label="Sezione principale">
+        <section class="hero" aria-label="Benvenuto su Tech Solutions">
             <div class="hero-content">
-                <h2>Il tuo partner tecnologico</h2>
-                <p>Forniamo soluzioni innovative per far crescere la tua attività nell'era digitale.</p>
-                <a href="#services" class="cta-button">Scopri i Nostri Servizi</a>
+                <h1 class="hero-title">Potenzia la tua azienda con la tecnologia</h1>
+                <p class="hero-description">Da Tech Solutions offriamo consulenza e soluzioni digitali per far crescere la tua impresa con sicurezza e innovazione.</p>
+                <a href="#services" class="cta-button">Scopri i nostri servizi</a>
             </div>
             <div class="hero-image" aria-hidden="true">
-                <img src="assets/images/hero-image.svg" alt="Team che lavora su soluzioni tecnologiche" />
+                <img src="assets/images/hero-image.svg" alt="Team al lavoro su soluzioni tecnologiche" />
             </div>
         </section>
 
-        <section id="services">
-            <h2>I Nostri Servizi</h2>
-            <div class="services-grid">
-                <div class="service">
-                    <h3>Sviluppo Web Personalizzato</h3>
-                    <p>Soluzioni web su misura per migliorare la presenza digitale della tua azienda.</p>
-                </div>
-                <div class="service">
-                    <h3>Ottimizzazione SEO</h3>
-                    <p>Strategie SEO per aumentare visibilità e traffico organico.</p>
-                </div>
-                <div class="service">
-                    <h3>Consulenza Cloud</h3>
-                    <p>Architetture cloud scalabili e sicure per la tua infrastruttura.</p>
+        <section id="services" class="services" aria-label="I nostri servizi">
+            <div class="container">
+                <h2 class="section-title">I Nostri Servizi</h2>
+                <div class="services-grid">
+                    <article class="service" aria-labelledby="service-1-title">
+                        <h3 id="service-1-title" class="service-title">Sviluppo Web Personalizzato</h3>
+                        <p class="service-description">Creiamo siti e applicazioni web su misura, ottimizzati per performance e accessibilità.</p>
+                        <a href="#" class="service-link">Scopri di più</a>
+                    </article>
+                    <article class="service" aria-labelledby="service-2-title">
+                        <h3 id="service-2-title" class="service-title">Ottimizzazione SEO</h3>
+                        <p class="service-description">Miglioriamo la visibilità organica attraverso strategie SEO tecniche e contenutistiche.</p>
+                        <a href="#" class="service-link">Scopri di più</a>
+                    </article>
+                    <article class="service" aria-labelledby="service-3-title">
+                        <h3 id="service-3-title" class="service-title">Consulenza Cloud</h3>
+                        <p class="service-description">Progettiamo e supportiamo migrazioni cloud, soluzioni scalabili e sicure.</p>
+                        <a href="#" class="service-link">Scopri di più</a>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="about">
-            <h2>Chi Siamo</h2>
-            <p>Tech Solutions è un'azienda di consulenza tecnologica dedicata a supportare le imprese nell'uso strategico della tecnologia per crescere e innovare.</p>
+        <section id="about" class="about-section" aria-label="Chi siamo">
+            <div class="container">
+                <h2 class="section-title">Chi Siamo</h2>
+                <p class="about-description">
+                    Tech Solutions offre servizi di consulenza tecnologica di alto livello per aiutare le aziende a crescere nell'era digitale. Il nostro team è specializzato in strategia IT, sviluppo software e trasformazione digitale.
+                </p>
+                <p class="about-description">
+                    Con anni di esperienza, conosciamo le sfide caratteristiche delle organizzazioni e lavoriamo per fornire soluzioni innovative e su misura che garantiscano un vantaggio competitivo.
+                </p>
+                <h3 class="about-subtitle">I nostri valori</h3>
+                <ul class="about-values">
+                    <li>Integrità: comunicazione onesta e trasparente.</li>
+                    <li>Innovazione: abbracciamo il cambiamento con soluzioni creative.</li>
+                    <li>Collaborazione: lavoriamo a stretto contatto con i clienti.</li>
+                    <li>Eccellenza: perseguiamo la massima qualità in ogni progetto.</li>
+                </ul>
+                <h3 class="about-subtitle">Il nostro team</h3>
+                <p class="about-description">
+                    Il nostro team, eterogeneo e appassionato, porta competenze approfondite in ogni iniziativa e si impegna a fornire risultati eccellenti.
+                </p>
+            </div>
+        </section>
+
+        <section id="case-studies" class="case-studies" aria-label="Progetti e case study">
+            <div class="container">
+                <h2>I Nostri Progetti</h2>
+                <p>Scopri come abbiamo aiutato i nostri clienti a raggiungere i loro obiettivi attraverso soluzioni tecnologiche innovative.</p>
+                <div class="case-study-grid">
+                    <article class="case-study">
+                        <h3>Project Alpha</h3>
+                        <p>Abbiamo collaborato con Azienda X per sviluppare una soluzione software personalizzata che ha aumentato l'efficienza operativa del 30%.</p>
+                        <a href="#" class="btn">Leggi di più</a>
+                    </article>
+                    <article class="case-study">
+                        <h3>Project Beta</h3>
+                        <p>Il nostro team ha supportato Azienda Y nell'implementazione di un sistema cloud che ha semplificato i processi e ridotto i costi.</p>
+                        <a href="#" class="btn">Leggi di più</a>
+                    </article>
+                    <article class="case-study">
+                        <h3>Project Gamma</h3>
+                        <p>Abbiamo creato un'app mobile per Azienda Z che ha migliorato l'engagement dei clienti e la soddisfazione generale.</p>
+                        <a href="#" class="btn">Leggi di più</a>
+                    </article>
+                </div>
+            </div>
         </section>
 
         <section id="contact">
