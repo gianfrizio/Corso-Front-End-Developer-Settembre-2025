@@ -11,18 +11,25 @@ tech-solutions-landing
 │   ├── css
 │   │   ├── styles.css
    │   │   └── utilities.css
-│   ├── components
-│   │   ├── header.html
-│   │   ├── hero.html
-│   │   ├── services.html
-│   │   ├── case-studies.html
-│   │   ├── about.html
-│   │   └── footer.html
+│   ├── assets
+│   │   └── images
+│   │       ├── hero-image.svg
+│   │       └── logo.svg
 │   └── fonts
 └── README.md
 ```
+Uso
+- Apri `src/index.html` nel browser per visualizzare la landing page.
+- Per personalizzare il contenuto modifica direttamente `src/index.html` e i fogli di stile in `src/css/`.
+- Per servire la pagina localmente (consigliato) puoi usare un server HTTP semplice dalla cartella `src`:
 
-## Funzionalità principali
+```bash
+cd src
+python3 -m http.server 8000 --bind 127.0.0.1
+# poi apri http://127.0.0.1:8000/ nel browser
+```
+
+Nota: i frammenti che prima erano in `src/components/` sono stati incorporati in `src/index.html`. Se vuoi mantenere i frammenti separati come backup, sono disponibili nella cartella `src/components/` oppure puoi rimuoverla.
 - Design responsive: il layout si adatta a diverse dimensioni dello schermo usando Flexbox e Grid.
 - Accessibilità: supporto per navigazione da tastiera e compatibilità con screen reader.
 - Interattività: realizzata con pseudo-classi CSS e ancore (nessun JavaScript).
