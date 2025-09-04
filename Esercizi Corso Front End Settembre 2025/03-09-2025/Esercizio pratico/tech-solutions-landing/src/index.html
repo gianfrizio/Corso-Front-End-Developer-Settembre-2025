@@ -11,51 +11,87 @@
     <!-- Link per saltare direttamente al contenuto (accessibilità) -->
     <a id="skip-link" class="skip-link" href="#main-content">Salta al contenuto</a>
     <header>
-        <div class="container">
+        <div class="container header-row">
             <div class="logo">
-                <a href="#home" aria-label="Tech Solutions">
-                    <img src="assets/images/logo.svg" alt="Logo Tech Solutions" width="140" height="40" />
+                <a class="brand" href="#home" aria-label="Tech Solutions">
+                    <img class="logo-img" src="assets/images/logo.svg" alt="Logo Tech Solutions" />
                 </a>
             </div>
             <nav aria-label="Navigazione principale">
-                <ul>
+                <ul class="nav-list">
                     <li><a href="#home" aria-label="Home">Home</a></li>
                     <li><a href="#services" aria-label="Servizi">Servizi</a></li>
                     <li><a href="#about" aria-label="Chi Siamo">Chi Siamo</a></li>
                     <li><a href="#case-studies" aria-label="Progetti">Progetti</a></li>
-                    <li><a href="#contact" aria-label="Contatti">Contatti</a></li>
                 </ul>
             </nav>
+            <div class="header-actions">
+                <a class="header-cta" href="#contact">Contattaci</a>
+            </div>
         </div>
     </header>
 
     <main id="main-content">
         <section class="hero" aria-label="Benvenuto su Tech Solutions">
-            <div class="hero-content">
-                <h1 class="hero-title">Potenzia la tua azienda con la tecnologia</h1>
-                <p class="hero-description">Da Tech Solutions offriamo consulenza e soluzioni digitali per far crescere la tua impresa con sicurezza e innovazione.</p>
-                <a href="#services" class="cta-button">Scopri i nostri servizi</a>
-            </div>
-            <div class="hero-image" aria-hidden="true">
-                <img src="assets/images/hero-image.svg" alt="Team al lavoro su soluzioni tecnologiche" />
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1 class="hero-title">Potenzia la tua azienda con la tecnologia</h1>
+                    <p class="hero-description">Da Tech Solutions offriamo consulenza e soluzioni digitali per far crescere la tua impresa con sicurezza e innovazione.</p>
+                    <div class="hero-badges">
+                        <span class="badge">Sicurezza</span>
+                        <span class="badge">Scalabilità</span>
+                        <span class="badge">Supporto 24/7</span>
+                    </div>
+                    <ul class="hero-features">
+                        <li>Architetture cloud su misura</li>
+                        <li>Siti e app performanti</li>
+                        <li>Strategie SEO tecniche</li>
+                    </ul>
+                    <div class="hero-ctas">
+                        <a href="#services" class="cta-button">Scopri i nostri servizi</a>
+                        <a href="#contact" class="btn secondary">Parla con un esperto</a>
+                    </div>
+                </div>
+                <div class="hero-image" aria-hidden="true">
+                    <img src="assets/images/hero-image.svg" alt="Team al lavoro su soluzioni tecnologiche" />
+                </div>
             </div>
         </section>
 
-        <section id="services" class="services" aria-label="I nostri servizi">
+    <section id="services" class="services decor-logo" aria-label="I nostri servizi">
             <div class="container">
                 <h2 class="section-title">I Nostri Servizi</h2>
                 <div class="services-grid">
                     <article class="service" aria-labelledby="service-1-title">
+                        <div class="service-icon" aria-hidden="true">
+                            <!-- semplice icona SVG -->
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M3 12h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+                                <path d="M3 6h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+                            </svg>
+                        </div>
                         <h3 id="service-1-title" class="service-title">Sviluppo Web Personalizzato</h3>
                         <p class="service-description">Creiamo siti e applicazioni web su misura, ottimizzati per performance e accessibilità.</p>
                         <a href="#" class="service-link">Scopri di più</a>
                     </article>
                     <article class="service" aria-labelledby="service-2-title">
+                        <div class="service-icon" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2v20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+                                <path d="M6 8l6-4 6 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+                            </svg>
+                        </div>
                         <h3 id="service-2-title" class="service-title">Ottimizzazione SEO</h3>
                         <p class="service-description">Miglioriamo la visibilità organica attraverso strategie SEO tecniche e contenutistiche.</p>
                         <a href="#" class="service-link">Scopri di più</a>
                     </article>
                     <article class="service" aria-labelledby="service-3-title">
+                        <div class="service-icon" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5" opacity="0.9"/>
+                                <path d="M19.4 15a7.5 7.5 0 0 0 0-6" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+                            </svg>
+                        </div>
                         <h3 id="service-3-title" class="service-title">Consulenza Cloud</h3>
                         <p class="service-description">Progettiamo e supportiamo migrazioni cloud, soluzioni scalabili e sicure.</p>
                         <a href="#" class="service-link">Scopri di più</a>
@@ -64,7 +100,7 @@
             </div>
         </section>
 
-        <section id="about" class="about-section" aria-label="Chi siamo">
+    <section id="about" class="about-section decor-logo" aria-label="Chi siamo">
             <div class="container">
                 <h2 class="section-title">Chi Siamo</h2>
                 <p class="about-description">
@@ -87,7 +123,7 @@
             </div>
         </section>
 
-        <section id="case-studies" class="case-studies" aria-label="Progetti e case study">
+    <section id="case-studies" class="case-studies decor-logo" aria-label="Progetti e case study">
             <div class="container">
                 <h2>I Nostri Progetti</h2>
                 <p>Scopri come abbiamo aiutato i nostri clienti a raggiungere i loro obiettivi attraverso soluzioni tecnologiche innovative.</p>
@@ -111,10 +147,11 @@
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contattaci</h2>
-            <!-- Form senza JavaScript: usa Formspree (sostituisci l'ID) o modifica action con mailto: -->
-            <form id="contact-form" action="https://formspree.io/f/REPLACE_WITH_ID" method="POST" accept-charset="utf-8">
+    <section id="contact" class="decor-logo">
+            <div class="container">
+                <h2 class="section-title">Contattaci</h2>
+                <!-- Form senza JavaScript: usa Formspree (sostituisci l'ID) o modifica action con mailto: -->
+                <form id="contact-form" action="https://formspree.io/f/REPLACE_WITH_ID" method="POST" accept-charset="utf-8">
                 <p id="contact-help" class="form-help">Compila il modulo e ti risponderemo entro 48 ore. I campi con <span aria-hidden="true">*</span> sono obbligatori.</p>
 
                 <label for="name">Nome <span class="required" aria-hidden="true">*</span></label>
@@ -132,9 +169,10 @@
                 <!-- Campo opzionale per soggetto e istruzioni: personalizza se usi Formspree -->
                 <input type="hidden" name="_subject" value="Richiesta da sito Tech Solutions">
 
-                <button type="submit" class="cta-button">Invia Messaggio</button>
-            </form>
-            <p class="form-note">Se preferisci, puoi anche inviare un'email a <a href="mailto:info@techsolutions.example">info@techsolutions.example</a>.</p>
+                    <button type="submit" class="cta-button">Invia Messaggio</button>
+                </form>
+                <p class="form-note">Se preferisci, puoi anche inviare un'email a <a href="mailto:info@techsolutions.example">info@techsolutions.example</a>.</p>
+            </div>
         </section>
     </main>
 

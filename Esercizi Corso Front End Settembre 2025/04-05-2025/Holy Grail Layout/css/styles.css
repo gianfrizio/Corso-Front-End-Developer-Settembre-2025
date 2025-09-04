@@ -1,0 +1,118 @@
+:root{
+  --gap: 0;
+  --header-h: 60px;
+  --footer-h: 56px;
+  --left-w: 220px;
+  --right-w: 220px;
+  --bg-header: #f36b6b;
+  --bg-left: #f3d26b;
+  --bg-right: #c7f36b;
+  --bg-footer: #66c2ea;
+  /* altezze da regolare per tablet/mobile */
+  --tablet-main-h: 360px;
+  --tablet-side-h: 240px;
+}
+
+*{box-sizing: border-box}
+html,body{height:100%;margin:0;padding:0}
+body{
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:#fff;
+  color:#111;
+}
+
+.page{
+  /* pieno schermo, senza margini né spazi tra le sezioni */
+  width: 100vw;
+  height: 100vh;
+  margin:0;
+  border-radius:0;
+  overflow:hidden;
+  box-shadow: none;
+  display:grid;
+  grid-template-columns: 1fr;
+  /* Mobile: header, main, left, right e footer stessa altezza */
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "header"
+    "content"
+    "left"
+    "right"
+    "footer";
+  gap: var(--gap);
+  grid-gap: var(--gap);
+}
+
+.site-header, .site-footer, .sidebar-left, .sidebar-right, .content{
+  padding: 0;
+}
+
+.site-header{
+  grid-area: header;
+  background:var(--bg-header);
+  text-align:center;
+  font-size:1.25rem;
+  display:flex;align-items:center;justify-content:center;
+}
+
+.content{
+  grid-area: content;
+  background: #fff;
+  /* lascia che la grid gestisca l'altezza per breakpoint */
+  min-height: 0;
+  display:flex;align-items:center;justify-content:center;
+}
+
+.sidebar-left{background:var(--bg-left);display:flex;align-items:center;justify-content:center;text-align:center}
+.sidebar-right{background:var(--bg-right);display:flex;align-items:center;justify-content:center;text-align:center}
+
+.site-footer{
+  grid-area: footer;
+  background:var(--bg-footer);
+  text-align:center;
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* Tablet: header e main in righe superiori; left/right affiancati sotto il main */
+@media (min-width: 768px){
+  /* Tablet: header e main a tutta larghezza, poi left+right affiancati, footer a tutta larghezza */
+  .page{
+    grid-template-columns: 1fr 1fr;
+    /* Tablet: header, riga grande per il main, poi riga più alta per left/right, poi footer */
+    grid-template-rows: var(--header-h) var(--tablet-main-h) var(--tablet-side-h) var(--footer-h);
+    grid-template-areas:
+      "header header"
+      "content content"
+      "left right"
+      "footer footer";
+  }
+
+  .site-header{grid-area: header}
+  .content{grid-area: content}
+  .sidebar-left{grid-area: left}
+  .sidebar-right{grid-area: right}
+  .site-footer{grid-area: footer}
+}
+
+/* Desktop: tre colonne - left / main / right */
+@media (min-width: 1280px){
+  .page{
+    grid-template-columns: var(--left-w) 1fr var(--right-w);
+    grid-template-rows: var(--header-h) 1fr var(--footer-h);
+    grid-template-areas:
+      "header header header"
+      "left content right"
+      "footer footer footer";
+  }
+
+  .site-header{grid-area: header}
+  .sidebar-left{grid-area: left}
+  .content{grid-area: content}
+  .sidebar-right{grid-area: right}
+  .site-footer{grid-area: footer}
+}
+
+/* piccole rifiniture visive */
+.site-header, .site-footer, .sidebar-left, .sidebar-right{
+  font-weight:600;
+}
