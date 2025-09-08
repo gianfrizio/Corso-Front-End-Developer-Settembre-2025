@@ -25,8 +25,13 @@ function addButton(title, buttonText, callback) {
     </div>
   `;
   
-  // Aggiungi l'event listener dopo aver creato l'HTML
-  document.getElementById(buttonId).addEventListener('click', callback);
+  // Usa setTimeout per assicurarsi che l'elemento sia nel DOM
+  setTimeout(() => {
+    const button = document.getElementById(buttonId);
+    if (button) {
+      button.addEventListener('click', callback);
+    }
+  }, 0);
 }
 
 // ESERCIZI DI BASE SU VARIABILI E TIPI
