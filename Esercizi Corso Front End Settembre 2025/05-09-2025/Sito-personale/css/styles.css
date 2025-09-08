@@ -651,6 +651,356 @@ footer p {
   }
 }
 
+/* Media Queries per Mobile e Tablet */
+
+/* Tablet Large (fino a 1024px) */
+@media (max-width: 1024px) {
+  header h1 {
+    font-size: 2em;
+  }
+  
+  section h2 {
+    font-size: 1.8em;
+  }
+  
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .offers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
+
+/* Tablet Portrait (fino a 768px) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  
+  header {
+    padding: 20px 15px;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  header h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  header nav ul {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  header nav ul li a {
+    padding: 8px 15px;
+    font-size: 16px;
+  }
+  
+  section {
+    padding: 30px 15px;
+    margin: 10px auto;
+  }
+  
+  section h2 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+  }
+  
+  #hero .hero-text h2 {
+    font-size: 1.8em;
+  }
+  
+  #hero .hero-text p {
+    font-size: 16px;
+  }
+  
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .product {
+    padding: 20px;
+  }
+  
+  .offers-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .offer-card {
+    padding: 20px;
+  }
+  
+  .about-text p {
+    font-size: 1em;
+  }
+  
+  .team-info, .certificates {
+    padding: 20px;
+  }
+  
+  #contatti h2 {
+    font-size: 1.8em;
+  }
+  
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .contact-info, .contact-form-container {
+    padding: 25px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .social-buttons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+/* Mobile Large (fino a 480px) */
+@media (max-width: 480px) {
+  header {
+    padding: 15px 10px;
+  }
+  
+  header h1 {
+    font-size: 1.5em;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  header nav ul li a {
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: block;
+    text-align: center;
+  }
+  
+  section {
+    padding: 25px 10px;
+    margin: 8px auto;
+  }
+  
+  section h2 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+  }
+  
+  #hero {
+    padding: 50px 15px;
+  }
+  
+  #hero .hero-text h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  #hero .hero-text p {
+    font-size: 14px;
+  }
+  
+  .product {
+    padding: 15px;
+  }
+  
+  .product h3 {
+    font-size: 1.2em;
+  }
+  
+  .offer-card {
+    padding: 15px;
+  }
+  
+  .offer-card h3 {
+    font-size: 1.2em;
+  }
+  
+  .offer-price {
+    font-size: 1.5em;
+  }
+  
+  #contatti {
+    padding: 50px 10px;
+  }
+  
+  #contatti h2 {
+    font-size: 1.5em;
+    margin-bottom: 25px;
+  }
+  
+  .contact-info, .contact-form-container {
+    padding: 20px;
+  }
+  
+  .contact-item {
+    padding: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .contact-item .icon {
+    font-size: 1.5em;
+    margin-right: 10px;
+    min-width: 40px;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  .magic-submit-btn {
+    padding: 15px;
+    font-size: 1em;
+  }
+  
+  .social-buttons {
+    grid-template-columns: 1fr;
+  }
+  
+  .social-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .about-text p {
+    font-size: 0.9em;
+    line-height: 1.6;
+  }
+  
+  .team-info ul li {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+}
+
+/* Mobile Small (fino a 320px) */
+@media (max-width: 320px) {
+  header h1 {
+    font-size: 1.3em;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  section {
+    padding: 20px 8px;
+  }
+  
+  section h2 {
+    font-size: 1.2em;
+  }
+  
+  #hero .hero-text h2 {
+    font-size: 1.3em;
+  }
+  
+  .product {
+    padding: 12px;
+  }
+  
+  .product h3 {
+    font-size: 1.1em;
+  }
+  
+  .offer-card {
+    padding: 12px;
+  }
+  
+  .contact-info, .contact-form-container {
+    padding: 15px;
+  }
+  
+  .contact-item {
+    padding: 10px;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 10px;
+    font-size: 13px;
+  }
+  
+  .magic-submit-btn {
+    padding: 12px;
+    font-size: 0.9em;
+  }
+}
+
+/* Orientamento Landscape per Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  header {
+    padding: 10px 15px;
+  }
+  
+  .header-content {
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  header h1 {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+  }
+  
+  header nav ul {
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 0;
+  }
+  
+  header nav ul li a {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  
+  section {
+    padding: 20px 15px;
+  }
+  
+  #hero {
+    padding: 30px 15px;
+  }
+}
+
 /* Miglioramenti per la sezione Home */
 #home {
   background-color: #f9f9f9;
