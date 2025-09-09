@@ -4,53 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista della Spesa</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script>
-        let items = [];
-        
-        function createPage() {
-            document.body.innerHTML = `
-                <h1>Lista della Spesa</h1>
-                <input type="text" id="input" placeholder="Prodotto...">
-                <button id="addBtn">Aggiungi</button>
-                <ul id="list"></ul>
-            `;
-            
-            document.getElementById('addBtn').onclick = addItem;
-            document.getElementById('input').onkeypress = function(e) {
-                if (e.key === 'Enter') addItem();
-            };
-        }
-        
-        function addItem() {
-            const input = document.getElementById('input');
-            const text = input.value.trim();
-            
-            if (text === '') return;
-            
-            items.push(text);
-            input.value = '';
-            renderList();
-        }
-        
-        function removeItem(index) {
-            items.splice(index, 1);
-            renderList();
-        }
-        
-        function renderList() {
-            const list = document.getElementById('list');
-            list.innerHTML = '';
-            
-            for (let i = 0; i < items.length; i++) {
-                const li = document.createElement('li');
-                li.innerHTML = items[i] + ' <button onclick="removeItem(' + i + ')">X</button>';
-                list.appendChild(li);
-            }
-        }
-        
-        createPage();
-    </script>
+    <h1>Lista della Spesa</h1>
+    <div class="filter-controls">
+      <label for="filterCategorySelect">Evidenzia categoria</label>
+      <select id="filterCategorySelect">
+        <option value="">Tutte</option>
+        <option value="Frutta">Frutta</option>
+        <option value="Verdura">Verdura</option>
+        <option value="Pane">Pane e Forno</option>
+        <option value="Latticini">Latticini</option>
+        <option value="Carne">Carne</option>
+        <option value="Pesce">Pesce</option>
+        <option value="Bevande">Bevande</option>
+        <option value="Snack">Snack</option>
+        <option value="Salse">Salse & Condimenti</option>
+        <option value="Pulizia">Pulizia Casa</option>
+        <option value="Cura">Cura Personale</option>
+        <option value="Congelati">Surgelati</option>
+        <option value="Altro">Altro</option>
+      </select>
+      <div id="counter" aria-live="polite">Hai 0 prodotti nella lista</div>
+    </div>
+
+    <div class="controls">
+      <input type="text" id="input" placeholder="Prodotto...">
+      <select id="addCategorySelect">
+        <option value="Frutta">Frutta</option>
+        <option value="Verdura">Verdura</option>
+        <option value="Pane">Pane e Forno</option>
+        <option value="Latticini">Latticini</option>
+        <option value="Carne">Carne</option>
+        <option value="Pesce">Pesce</option>
+        <option value="Bevande">Bevande</option>
+        <option value="Snack">Snack</option>
+        <option value="Salse">Salse & Condimenti</option>
+        <option value="Pulizia">Pulizia Casa</option>
+        <option value="Cura">Cura Personale</option>
+        <option value="Congelati">Surgelati</option>
+        <option value="Altro" selected>Altro</option>
+      </select>
+      <input type="number" id="quantityInput" placeholder="Quantità..." min="1" value="1">
+      <button id="addBtn">Aggiungi</button>
+    </div>
+    <ul id="list"></ul>
+    <script src="script.js"></script>
 </body>
 </html>

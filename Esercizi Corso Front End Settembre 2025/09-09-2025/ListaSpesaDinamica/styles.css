@@ -1,0 +1,158 @@
+/* Styles leggeri per la lista della spesa */
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 0 16px;
+  color: #222;
+  background: #f7f7fb;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #d84b4b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#input, #quantityInput {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-right: 8px;
+  font-size: 0.95rem;
+}
+
+#addBtn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 9px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#addBtn:hover { opacity: 0.95; }
+ 
+#list {
+  list-style: none;
+  padding: 0;
+  margin-top: 18px;
+}
+ 
+.controls select {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  margin-right: 8px;
+}
+ 
+#counter {
+  margin-top: 8px;
+  color: #444;
+  font-weight: 600;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  margin-top: 18px;
+  font-size: 1rem;
+  color: #333;
+  opacity: 0.9;
+}
+
+.purchased {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Evidenziazione per categoria selezionata */
+.list-item.highlight {
+  border-color: #0b66ff;
+  box-shadow: 0 4px 12px rgba(11,102,255,0.12);
+  transform: translateY(-2px);
+}
+
+.list-item.dimmed {
+  opacity: 0.45;
+  filter: grayscale(20%);
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid #e6e6f0;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 2px rgba(20,20,40,0.03);
+}
+
+.item-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-name {
+  font-weight: 600;
+}
+
+.item-quantity {
+  background: #eef5ff;
+  color: #0b66ff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.remove-btn {
+  background: #ff5c5c;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.remove-btn:hover { opacity: 0.95; }
+
+.item-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.toggle-btn {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.toggle-btn[aria-pressed="true"] {
+  background: #e6ffee;
+  border-color: #38b000;
+}
