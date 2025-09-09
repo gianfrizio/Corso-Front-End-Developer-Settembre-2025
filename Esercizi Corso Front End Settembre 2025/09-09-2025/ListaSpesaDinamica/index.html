@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista della Spesa</title>
+</head>
+<body>
+    <script>
+        let items = [];
+        
+        function createPage() {
+            document.body.innerHTML = `
+                <h1>Lista della Spesa</h1>
+                <input type="text" id="input" placeholder="Prodotto...">
+                <button id="addBtn">Aggiungi</button>
+                <ul id="list"></ul>
+            `;
+            
+            document.getElementById('addBtn').onclick = addItem;
+            document.getElementById('input').onkeypress = function(e) {
+                if (e.key === 'Enter') addItem();
+            };
+        }
+        
+        function addItem() {
+            const input = document.getElementById('input');
+            const text = input.value.trim();
+            
+            if (text === '') return;
+            
+            items.push(text);
+            input.value = '';
+            renderList();
+        }
+        
+        function removeItem(index) {
+            items.splice(index, 1);
+            renderList();
+        }
+        
+        function renderList() {
+            const list = document.getElementById('list');
+            list.innerHTML = '';
+            
+            for (let i = 0; i < items.length; i++) {
+                const li = document.createElement('li');
+                li.innerHTML = items[i] + ' <button onclick="removeItem(' + i + ')">X</button>';
+                list.appendChild(li);
+            }
+        }
+        
+        createPage();
+    </script>
+</body>
+</html>
