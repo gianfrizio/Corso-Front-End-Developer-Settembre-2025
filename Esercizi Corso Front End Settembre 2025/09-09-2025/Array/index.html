@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Esercizi Array</title>
+</head>
+<body>
+		<h1>Esercizi Array</h1>
+		<!-- Contenitore per output degli esercizi -->
+		<div id="output"></div>
+		<!-- Definizione di display() per mostrare risultati anche a schermo -->
+		<script>
+			function display(...args) {
+				const msg = args.join(' ');
+				console.log(...args);
+				const p = document.createElement('p');
+				p.textContent = msg;
+				document.getElementById('output').appendChild(p);
+			}
+		</script>
+		<script src="script.js"></script>
+</body>
+</html>
