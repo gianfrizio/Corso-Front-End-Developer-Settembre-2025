@@ -1,0 +1,106 @@
+/* ========== Variabili ========== */
+:root {
+  --bg: #f7f7fb;
+  --card: #ffffff;
+  --accent: #4b79ff;
+  --muted: #666;
+}
+
+/* ========== Base ========== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #222;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: var(--bg);
+}
+
+/* ========== Layout ========== */
+.container {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0 0 18px;
+}
+
+.panel {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  margin-bottom: 16px;
+}
+
+/* ========== Form / Controlli ========== */
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  margin-top: 6px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #e6e6ef;
+  background: #fff;
+}
+
+/* Nascondi freccia nativa su alcune piattaforme per un aspetto più pulito */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.actions {
+  margin-top: 12px;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 0;
+  cursor: pointer;
+}
+
+/* ========== Liste / Display ========== */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  padding: 8px 6px;
+  border-bottom: 1px solid #f0f0f6;
+  display: flex;
+  justify-content: space-between;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.stats p {
+  margin: 8px 0;
+}
+

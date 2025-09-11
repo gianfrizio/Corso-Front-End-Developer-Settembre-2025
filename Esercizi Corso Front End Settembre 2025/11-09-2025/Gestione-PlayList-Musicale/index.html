@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gestione Playlist Musicale</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Gestione Playlist Musicale</h1>
+
+      <section class="panel">
+        <h2>Aggiungi una canzone</h2>
+        <form id="addSongForm">
+          <div class="row">
+            <label>Titolo <input type="text" id="title" required /></label>
+            <label>Artista <input type="text" id="artist" required /></label>
+          </div>
+          <div class="row">
+            <label>Genere
+              <select id="genere" required>
+                <option value="">--Seleziona genere--</option>
+                <option value="Rock">Rock</option>
+                <option value="Pop">Pop</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Classica">Classica</option>
+				<option value="Hip-Hop">Hip-Hop</option>
+				<option value="Rap">Rap</option>
+                <option value="Altro">Altro</option>
+              </select>
+            </label>
+            <label>Durata (min) <input type="number" id="duration" required min="0" /></label>
+          </div>
+          <div class="actions">
+            <button type="submit">Aggiungi</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Playlist originale</h2>
+        <ul id="original-list" class="list"></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Nuova playlist (durate +1)</h2>
+        <ul id="modified-list" class="list"></ul>
+      </section>
+
+      <section class="panel stats">
+        <p id="total-duration">Totale durata playlist: — minuti</p>
+        <p id="rock-songs">Canzoni Rock: —</p>
+      </section>
+    </main>
+
+    <script src="js/script.js" defer></script>
+  </body>
+</html>
