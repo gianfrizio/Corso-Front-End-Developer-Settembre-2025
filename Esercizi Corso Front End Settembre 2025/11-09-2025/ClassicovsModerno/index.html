@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statistica Studenti</title>
+  </head>
+  <body>
+    <h1>Analisi Partecipanti</h1>
+    <button id="run">Esegui Analisi</button>
+
+    <!-- Form opzionale per rimuovere uno studente per nome -->
+    <form id="removeForm" style="margin-top:12px;">
+      <label for="removeName">Rimuovi studente per nome:</label>
+      <input id="removeName" name="removeName" type="text" placeholder="Nome completo" />
+      <button type="submit">Rimuovi</button>
+    </form>
+
+    <div id="output"></div>
+
+    <style>
+      /* Classi per evidenziare promossi/bocciati */
+      .promosso { color: #0a7b0a; font-weight: 600; }
+      .bocciato { color: #b30000; font-weight: 600; }
+      #output ul { margin-top: 8px; }
+    </style>
+
+    <script src="script.js"></script>
+  </body>
+</html>
