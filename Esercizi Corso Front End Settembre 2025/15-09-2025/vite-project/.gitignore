@@ -22,3 +22,29 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment files (avoid committing secrets)
+.env
+.env.*
+.env.local
+
+# Build / cache
+.cache/
+.parcel-cache/
+.vite/
+dist/
+build/
+out/
+
+# Test coverage
+coverage/
+
+# TypeScript
+*.tsbuildinfo
+
+# Tool caches
+.eslintcache
+
+# Packages
+*.tgz
+
